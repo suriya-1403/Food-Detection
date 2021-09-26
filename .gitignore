@@ -1,3 +1,6 @@
+Backend/Data/images
+Backend/Data/Train
+Backend/Data/Test
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

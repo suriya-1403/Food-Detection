@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Classification</title>
+    <link rel= "stylesheet" type= "text/css" href="../static/style.css">
+
+</head>
+<body>
+<div class="form">
+    <h1>Food Identification </h1>
+    <br><br>
+
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <div class="container">
+                <label class="label-upload">Upload Your Image</label>
+                <div class="form-file">
+                    <input type="file" class="input-file" name="my_image" id="pwd">
+                    {% if prediction %}
+{#                    <img src="{{img_path}}" height="400px" width="400px">#}
+                    <h2> Your Prediction   : <i> {{prediction}} </i></h2>
+
+                    {% endif %}
+                </div>
+
+        </div>
+            <br><br><br>
+            <div class="button-submit">
+                <button type="submit" class="btn second">Submit</button>
+            </div>
+
+            </form>
+
+
+
+
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
