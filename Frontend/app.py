@@ -2,11 +2,11 @@ from flask import Flask, render_template, request
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
+
 app = Flask(__name__)
 food_list = ['donuts', 'pizza', 'samosa']
 
 model = load_model('model.hdf5', compile=False)
-
 
 
 def predict_label(images):
@@ -15,7 +15,6 @@ def predict_label(images):
         img = image.img_to_array(img)
         img = np.expand_dims(img, axis=0)
         img /= 255.
-
         pred = model.predict(img)
         index = np.argmax(pred)
         food_list.sort()
@@ -42,4 +41,3 @@ def get_hours():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
